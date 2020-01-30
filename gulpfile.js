@@ -4,8 +4,8 @@ var gulp = require("gulp"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     sourcemaps = require("gulp-sourcemaps"),
-    browserSync = require("browser-sync").create();
-
+    browserSync = require("browser-sync").create(),
+    path = require("gulp-path");
 
 var paths = {
     styles: {
