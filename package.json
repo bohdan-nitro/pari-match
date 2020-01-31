@@ -24,7 +24,9 @@
   "homepage": "https://github.com/bohdan-nitro/pari-match#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "path": "^0.12.7"
+    "gulp-watch": "^5.0.1",
+    "path": "^0.12.7",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

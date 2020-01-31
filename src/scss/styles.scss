@@ -1,0 +1,131 @@
+@import "main.scss";
+
+$headerHeight: 70px;
+$footerHeight: 72px;
+$footerColor: #000;
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    background: url("../images/bg/background-over.jpg") no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &::after {
+    background-color: $backgroundColor;
+    z-index: 2;
+    mix-blend-mode: multiply;
+  }
+
+  > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+
+    &.dirt {
+      background: url("../images/bg/background-dirt.png") no-repeat;
+      background-size: cover;
+      z-index: 3;
+    }
+
+    &.bullets {
+      background: url("../images/bg/background-bullets.png") no-repeat;
+      background-size: cover;
+      z-index: 4;
+    }
+
+    &.pluses {
+      z-index: 5;
+
+      > div {
+        position: absolute;
+        transform: translateX(-50%);
+
+        &.top {
+          top: 5px;
+          left: 50%;
+          width: 422px;
+          height: 15px;
+          background: url("../images/bg/pluses/top.png") no-repeat;
+        }
+
+        &.left {
+          width: 422px;
+          height: 451px;
+          top: 366px;
+          left: 197px;
+          background: url("../images/bg/pluses/left.png") no-repeat;
+
+        }
+
+        &.right {
+          width: 422px;
+          height: 480px;
+          right: 238px;
+          top: -11px;
+          transform: translateX(50%);
+          background: url("../images/bg/pluses/right.png") no-repeat;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: $headerHeight;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  .logo {
+  }
+
+  .rightSide {
+  }
+
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - (70px + 72px));
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: $footerHeight;
+  color: $footerColor;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+

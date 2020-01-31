@@ -1,53 +1,36 @@
-var gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    sourcemaps = require("gulp-sourcemaps"),
-    browserSync = require("browser-sync").create(),
-    path = require("gulp-path");
+const gulp = require("gulp");
+const watch = require("gulp-watch");
+const sass = require("gulp-sass");
+const browserSync = require("browser-sync").create();
 
-var paths = {
-    styles: {
-        src: "sass/styles.sass",
-        dest: "./"
-    }
-};
 
-function style() {
-    return (
-        gulp
-            .src(paths.styles.src)
-            .pipe(sourcemaps.init())
-            .pipe(sass())
-            .on("error", sass.logError)
-            .pipe(postcss([autoprefixer(), cssnano()]))
-            .pipe(sourcemaps.write())
-            .pipe(gulp.dest(paths.styles.dest))
-            .pipe(browserSync.stream())
-    );
-}
 
-function reload() {
-    browserSync.reload();
-}
-
-function watch() {
-
+gulp.task('server', function () {
     browserSync.init({
-        // You can tell browserSync to use this directory and serve it as a mini-server
         server: {
-            baseDir: "./"
+            baseDir: "./src/"
         }
-        // If you are already serving your website locally using something like apache
-        // You can use the proxy setting to proxy that instead
-        // proxy: "yourlocal.dev"
+    });
+});
+
+
+gulp.task("scss", function () {
+    return gulp.src("./src/scss/main.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("./src/css/"))
+        .pipe(browserSync.stream());
+});
+
+
+gulp.task('watch', function () {
+
+    watch(["./src/*.html", "./src/scripts/*.js", "./src/images/*.*"], gulp.parallel(browserSync.reload));
+
+    watch('./src/scss/**/*.scss', function () {
+        setTimeout(gulp.series('scss'), 500);
     });
 
-    gulp.watch(paths.styles.src, style);
-    gulp.watch("path/to/html/*.html", reload);
 
-}
+});
 
-exports.style = style;
-exports.watch = watch;
+gulp.task("default", gulp.series("scss", gulp.parallel("server", "watch")));
