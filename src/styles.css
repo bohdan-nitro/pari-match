@@ -1,0 +1,501 @@
+@font-face {
+  font-family: 'Parimatch';
+  font-weight: 500;
+  src: url("../fonts/Parimatch-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Parimatch';
+  font-weight: 400;
+  src: url("../fonts/ParimatchMedium.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Parimatch';
+  font-weight: 300;
+  src: url("../fonts/Parimatch-Light.woff") format("woff"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, span, a {
+  font-family: "Parimatch";
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none; }
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain; }
+
+.background {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .background::before, .background::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .background::before {
+    background: url("../images/bg/background-over.jpg") no-repeat;
+    background-size: cover;
+    z-index: 1; }
+  .background::after {
+    background-color: #f8ff13;
+    z-index: 2;
+    mix-blend-mode: multiply; }
+  .background > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover; }
+    .background > div.dirt {
+      background: url("../images/bg/background-dirt.png") no-repeat;
+      background-size: cover;
+      z-index: 3; }
+    .background > div.bullets {
+      background: url("../images/bg/background-bullets.png") no-repeat;
+      background-size: cover;
+      z-index: 4; }
+    .background > div.pluses {
+      z-index: 5; }
+      .background > div.pluses > div {
+        position: absolute;
+        transform: translateX(-50%); }
+        .background > div.pluses > div.top {
+          top: 5px;
+          left: 50%;
+          width: 422px;
+          height: 15px;
+          background: url("../images/bg/pluses/top.png") no-repeat; }
+        .background > div.pluses > div.left {
+          width: 422px;
+          height: 451px;
+          top: 366px;
+          left: 197px;
+          background: url("../images/bg/pluses/left.png") no-repeat; }
+        .background > div.pluses > div.right {
+          width: 422px;
+          height: 480px;
+          right: 238px;
+          top: -11px;
+          transform: translateX(50%);
+          background: url("../images/bg/pluses/right.png") no-repeat; }
+    .background > div.persons {
+      z-index: 6; }
+      .background > div.persons .person {
+        position: absolute; }
+        .background > div.persons .person.tracer {
+          top: 290px;
+          right: 0;
+          width: 473px;
+          height: 668px; }
+        .background > div.persons .person.pubg {
+          top: 350px;
+          left: -34px;
+          width: 847px;
+          height: 671px; }
+        .background > div.persons .person.jugg {
+          top: 5px;
+          left: 50%;
+          transform: translateX(-42px);
+          width: 500px;
+          height: 906px; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 64px; }
+  .header img {
+    object-fit: contain; }
+  .header .logo {
+    margin-top: 32px;
+    width: 240px;
+    height: 74px; }
+  .header .rightSide {
+    margin-top: 8px;
+    width: 330px;
+    height: 109px; }
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - (70px + 72px));
+  z-index: 10;
+  overflow: hidden; }
+  .content .text {
+    height: 620px; }
+    .content .text .box-content .title-sport__box {
+      position: relative;
+      width: 100%;
+      max-width: 351px;
+      background: url("../images/text/paybox.png");
+      height: 51px;
+      text-align: center;
+      align-items: center;
+      margin-left: 122px;
+      margin-top: 45px; }
+      .content .text .box-content .title-sport__box .title-sport {
+        padding: 10px;
+        font-family: "Parimatch";
+        font-size: 33px;
+        text-transform: uppercase;
+        color: #ffff;
+        align-items: center; }
+        .content .text .box-content .title-sport__box .title-sport:before {
+          content: "";
+          position: absolute;
+          width: 55px;
+          height: 36px;
+          border-bottom: 1px solid #ffffff;
+          left: -18px; }
+        .content .text .box-content .title-sport__box .title-sport::after {
+          content: url("../images/text/cross2.png");
+          position: absolute;
+          left: 0;
+          top: 135px;
+          z-index: 2; }
+    .content .text .box-content .bonus-box {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      position: relative; }
+      .content .text .box-content .bonus-box:after {
+        content: url("../images/text/letter-dirt.png");
+        position: absolute;
+        top: 33px;
+        left: -23px; }
+      .content .text .box-content .bonus-box:before {
+        content: '';
+        position: absolute;
+        top: 100px;
+        left: 356px;
+        width: 65px;
+        border-bottom: 1px solid #ffffff;
+        height: 10px; }
+      .content .text .box-content .bonus-box .bonus-name {
+        display: flex;
+        font-family: "Parimatch";
+        font-size: 160px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-left: 42px; }
+        .content .text .box-content .bonus-box .bonus-name:before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 37px;
+          border-bottom: 1px solid #ffffff;
+          width: 214px; }
+        .content .text .box-content .bonus-box .bonus-name:after {
+          content: "";
+          position: absolute;
+          top: 100px;
+          left: 210px;
+          border-bottom: 5px solid #ffffff;
+          width: 30px;
+          height: 18px; }
+      .content .text .box-content .bonus-box .bonus-price {
+        font-family: "Parimatch";
+        font-size: 160px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transform: translate(203px, -33px); }
+        .content .text .box-content .bonus-box .bonus-price:before {
+          content: "";
+          position: absolute;
+          border-bottom: 15px solid #000;
+          width: 20px;
+          height: 5px;
+          top: 80px;
+          left: 290px; }
+        .content .text .box-content .bonus-box .bonus-price:after {
+          content: "";
+          position: absolute;
+          border-bottom: 15px solid #000;
+          width: 62px;
+          height: 5px;
+          top: 102px;
+          left: 285px; }
+      .content .text .box-content .bonus-box .letter-bonus {
+        content: url("../images/text/bonus-dirt.png");
+        position: absolute;
+        top: 37px;
+        left: 37px; }
+      .content .text .box-content .bonus-box .letter-bonus__white {
+        content: url("../images/text/bonus-dirt-2.png");
+        position: absolute;
+        top: 37px;
+        left: 37px; }
+    .content .text .box-content .info-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex; }
+      .content .text .box-content .info-box::before {
+        content: "";
+        background: url("../images/text/cross-1.png");
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: -80px;
+        left: 448px; }
+      .content .text .box-content .info-box::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 10px;
+        left: 486px;
+        top: -122px;
+        border-bottom: 2px solid #ffffff; }
+      .content .text .box-content .info-box .registration-info {
+        font-family: "Parimatch";
+        font-size: 74px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        line-height: 1.1;
+        transform: translate(36px, -40px);
+        opacity: 0.4; }
+    .content .text .box-content .btn-registration {
+      width: 100%;
+      background: url("../images/text/btn-link.png");
+      background-size: cover;
+      height: 110px;
+      max-width: 470px;
+      max-height: 120px;
+      padding-top: 31px;
+      margin-left: 66px; }
+      .content .text .box-content .btn-registration .btn-link {
+        padding-top: 29px;
+        text-decoration: none;
+        color: #f8ff13;
+        font-size: 36px;
+        text-transform: uppercase;
+        margin-left: 77px;
+        letter-spacing: 1.3px; }
+
+.steps {
+  margin-top: 10vh; }
+  .steps .steps-wrap {
+    display: flex;
+    flex-flow: row nowrap; }
+    .steps .steps-wrap .step {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 33.33333%;
+      font-family: "Parimatch"; }
+      .steps .steps-wrap .step .icon {
+        position: relative;
+        width: 70px;
+        height: 55px; }
+        .steps .steps-wrap .step .icon::before {
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: -1;
+          background: url("../images/steps/1/step-1.png") no-repeat;
+          background-size: cover;
+          width: 100%;
+          height: 100%; }
+        .steps .steps-wrap .step .icon .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400; }
+      .steps .steps-wrap .step .icon-middle {
+        position: relative;
+        width: 70px;
+        height: 55px; }
+        .steps .steps-wrap .step .icon-middle::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url("../images/steps/2/step-2.png") no-repeat;
+          background-size: cover;
+          z-index: -1;
+          width: 100%;
+          height: 100%; }
+        .steps .steps-wrap .step .icon-middle .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400; }
+        .steps .steps-wrap .step .icon-middle .title {
+          font-size: 28px;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin-left: 10px; }
+      .steps .steps-wrap .step .icon-last {
+        position: relative;
+        width: 70px;
+        height: 56px; }
+        .steps .steps-wrap .step .icon-last::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url("../images/steps/3/step-3.png") no-repeat;
+          background-size: cover;
+          z-index: -1;
+          width: 100%;
+          height: 100%; }
+        .steps .steps-wrap .step .icon-last .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400; }
+        .steps .steps-wrap .step .icon-last .title {
+          font-size: 28px;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin-left: 10px; }
+      .steps .steps-wrap .step .title {
+        font-size: 28px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left: 10px; }
+
+.copyright-box {
+  display: none; }
+
+footer {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
+  width: 100%;
+  height: 72px;
+  background-color: #000;
+  z-index: 10; }
+  footer .payments {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 32px; }
+    footer .payments a {
+      margin-right: 27px; }
+  footer .download {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 42px; }
+    footer .download a {
+      margin: 0 7px; }
+      footer .download a:first-child {
+        margin-left: 0; }
+      footer .download a:last-child {
+        margin-right: 0; }
+  footer .right-col {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 32px; }
+    footer .right-col .socials {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin-left: 150px; }
+      footer .right-col .socials a {
+        margin-right: 18px; }
+        footer .right-col .socials a:last-child {
+          margin-right: 0; }
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1024px) and (min-width: 720px) {
+  .container {
+    max-width: 700px;
+    margin: 0 auto; }
+  .background .header-response {
+    background: url("../images/header/header-main-logo.png") no-repeat;
+    position: absolute;
+    z-index: 10;
+    left: 30%;
+    top: 25px; }
+  .background .persons {
+    z-index: 6; }
+    .background .persons .person.pubg {
+      width: 100%;
+      max-width: 485px;
+      left: 460px !important; }
+    .background .persons .person.jugg {
+      max-width: 320px;
+      left: 27% !important;
+      top: 277px !important; }
+    .background .persons .person.tracer {
+      top: 366px !important;
+      right: inherit !important;
+      width: 325px !important;
+      left: 62px; }
+  .background .pluses {
+    display: none; }
+  .header {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; }
+    .header .logo {
+      display: none; }
+    .header .rightSide {
+      display: none; }
+  .content .text {
+    margin-top: 120px; }
+    .content .text .box-content .title-sport__box {
+      background: url("../images/text/paybox-responsive.png") no-repeat;
+      max-width: 275px;
+      width: 100%;
+      max-height: 45px;
+      margin-left: 144px; }
+      .content .text .box-content .title-sport__box .title-sport {
+        font-size: 26px; }
+        .content .text .box-content .title-sport__box .title-sport:before {
+          height: 27px; }
+        .content .text .box-content .title-sport__box .title-sport:after {
+          top: 110px;
+          left: -5px; }
+    .content .text .box-content .bonus-box .bonus-name {
+      margin-left: 75px;
+      font-size: 120px; }
+    .content .text .box-content .bonus-box .bonus-price {
+      font-size: 120px; }
+  .content .copyright-box {
+    display: flex;
+    justify-content: flex-end; }
+    .content .copyright-box .copyright-title {
+      font-size: 20px;
+      opacity: 0.4;
+      text-transform: uppercase;
+      margin-right: 80px; }
+  .content {
+    display: none; }
+  footer {
+    display: none; } }

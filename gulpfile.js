@@ -15,9 +15,9 @@ gulp.task('server', function () {
 
 
 gulp.task("scss", function () {
-    return gulp.src("./src/scss/main.scss")
+    return gulp.src("./src/scss/styles.scss")
         .pipe(sass())
-        .pipe(gulp.dest("./src/css/"))
+        .pipe(gulp.dest("./src/"))
         .pipe(browserSync.stream());
 });
 

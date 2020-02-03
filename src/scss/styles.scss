@@ -1,10 +1,12 @@
 @import "main.scss";
 
+
 $headerHeight: 70px;
 $footerHeight: 72px;
 $footerColor: #000;
 
 .background {
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -90,6 +92,38 @@ $footerColor: #000;
 
     }
 
+    &.persons {
+      z-index: 6;
+
+      .person {
+        position: absolute;
+
+        &.tracer {
+          top: 290px;
+          right: 0;
+          width: 473px;
+          height: 668px;
+        }
+
+        &.pubg {
+          top: 350px;
+          left: -34px;
+          width: 847px;
+          height: 671px;
+        }
+
+        &.jugg {
+          top: 5px;
+          left: 50%;
+          transform: translateX(-42px);
+          width: 500px;
+          height: 906px;
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -100,12 +134,23 @@ $footerColor: #000;
   height: $headerHeight;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 10;
+  padding: 0 64px;
+
+  img {
+    object-fit: contain;
+  }
 
   .logo {
+    margin-top: 32px;
+    width: 240px;
+    height: 74px;
   }
 
   .rightSide {
+    margin-top: 8px;
+    width: 330px;
+    height: 109px;
   }
 
 }
@@ -114,13 +159,411 @@ $footerColor: #000;
   position: relative;
   width: 100%;
   height: calc(100vh - (70px + 72px));
+  z-index: 10;
+  overflow: hidden;
+
+  .text {
+    height: 620px;
+
+
+    .box-content {
+
+
+      .title-sport__box {
+        position: relative;
+        width: 100%;
+        max-width: 351px;
+        background: url("../images/text/paybox.png");
+        height: 51px;
+        text-align: center;
+        align-items: center;
+        margin-left: 122px;
+        margin-top: 45px;
+
+        .title-sport {
+          padding: 10px;
+          font-family: $pariMatch;
+          font-size: 33px;
+          text-transform: uppercase;
+          color: #ffff;
+          align-items: center;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 36px;
+            border-bottom: 1px solid #ffffff;
+            left: -18px;
+          }
+          &::after  {
+            content: url("../images/text/cross2.png");
+            position: absolute;
+            left: 0;
+            top: 135px;
+            z-index: 2;
+          }
+
+
+        }
+
+
+      }
+
+      .bonus-box {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        position: relative;
+
+        &:after{
+          content: url("../images/text/letter-dirt.png");
+          position: absolute;
+          top: 33px;
+          left: -23px;
+        }
+        &:before  {
+          content: '';
+          position: absolute;
+          top: 100px;
+          left: 356px;
+          width: 65px;
+          border-bottom: 1px solid #ffffff;
+          height: 10px;
+        }
+
+        .bonus-name {
+          display: flex;
+          font-family: $pariMatch;
+          font-size: 160px;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          margin-left: 42px;
+
+          &:before  {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 37px;
+            border-bottom: 1px solid #ffffff;
+            width: 214px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 100px;
+            left: 210px;
+            border-bottom: 5px solid #ffffff;
+            width: 30px;
+            height: 18px;
+          }
+
+        }
+
+        .bonus-price {
+          font-family: $pariMatch;
+          font-size: 160px;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          transform: translate(203px, -33px);
+
+          &:before  {
+            content: "";
+            position: absolute;
+            border-bottom: 15px solid $footerColor;
+            width: 20px;
+            height: 5px;
+            top: 80px;
+            left: 290px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 15px solid $footerColor;
+            width: 62px;
+            height: 5px;
+            top: 102px;
+            left: 285px;
+          }
+
+        }
+
+        .letter-bonus {
+          content: url("../images/text/bonus-dirt.png");
+          position: absolute;
+          top: 37px;
+          left: 37px;
+
+
+
+
+        }
+        .letter-bonus__white  {
+          content: url("../images/text/bonus-dirt-2.png");
+          position: absolute;
+          top: 37px;
+          left: 37px;
+        }
+      }
+
+      .info-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        &::before {
+            content: "";
+            background: url("../images/text/cross-1.png");
+            position: absolute;
+            width: 15px;
+            height: 15px;
+          top: -80px;
+          left: 448px;
+
+        }
+        &::after  {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 10px;
+          left: 486px;
+          top: -122px;
+          border-bottom: 2px solid #ffffff;
+        }
+
+
+        .registration-info {
+          font-family: $pariMatch;
+          font-size: 74px;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          line-height: 1.1;
+          transform: translate(36px, -40px);
+          opacity: 0.4;
+        }
+
+      }
+      .btn-registration {
+        width: 100%;
+        background: url("../images/text/btn-link.png");
+        background-size: cover;
+        height: 110px;
+        max-width: 470px;
+        max-height: 120px;
+        padding-top: 31px;
+        margin-left: 66px;
+
+
+
+
+        .btn-link {
+          padding-top: 29px;
+          text-decoration: none;
+          color: $backgroundColor;
+          font-size: 36px;
+          text-transform: uppercase;
+          margin-left: 77px;
+          letter-spacing: 1.3px;
+        }
+      }
+    }
+
+  }
 }
+
+.steps {
+  margin-top: 10vh;
+
+  .steps-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .step {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      width: (100% / 3);
+      font-family: $pariMatch;
+
+      .icon {
+        position: relative;
+        width: 70px;
+        height: 55px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: -1;
+          background: url("../images/steps/1/step-1.png") no-repeat;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+
+
+        }
+
+        .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400;
+
+        }
+
+      }
+      .icon-middle  {
+        position: relative;
+        width: 70px;
+        height: 55px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url("../images/steps/2/step-2.png") no-repeat;
+          background-size: cover;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        }
+        .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400;
+
+        }
+        .title {
+          font-size: 28px;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin-left: 10px;
+        }
+      }
+
+      .icon-last  {
+        position: relative;
+        width: 70px;
+        height: 56px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: url("../images/steps/3/step-3.png") no-repeat;
+          background-size: cover;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        }
+        .number {
+          font-size: 32px;
+          text-align: center;
+          line-height: 55px;
+          font-weight: 400;
+
+        }
+        .title {
+          font-size: 28px;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin-left: 10px;
+        }
+
+      }
+
+      .title {
+        font-size: 28px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+}
+
+.copyright-box  {
+  display: none;
+}
+
+
 
 footer {
   position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
   width: 100%;
   height: $footerHeight;
-  color: $footerColor;
+  background-color: $footerColor;
+  z-index: 10;
+
+  .payments {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 32px;
+
+    a {
+      margin-right: 27px;
+    }
+
+  }
+
+  .download {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 42px;
+
+    a {
+      margin: 0 7px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  .right-col {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 32px;
+
+    .socials {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin-left: 150px;
+
+      a {
+        margin-right: 18px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
 .container {
@@ -129,3 +572,5 @@ footer {
   margin: 0 auto;
 }
 
+
+@import "responsive.scss";
