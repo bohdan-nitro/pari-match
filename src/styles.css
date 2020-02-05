@@ -298,7 +298,7 @@ img {
         letter-spacing: 1.3px; }
 
 .steps {
-  margin-top: 10vh; }
+  margin-top: 30px; }
   .steps .steps-wrap {
     display: flex;
     flex-flow: row nowrap; }
@@ -431,7 +431,59 @@ footer {
   width: 100%;
   margin: 0 auto; }
 
-@media screen and (max-width: 1024px) and (min-width: 720px) {
+.footer-responsive {
+  display: none; }
+
+@media screen and (max-width: 1440px) and (min-width: 1200px) {
+  .header .logo {
+    height: 50px;
+    width: 165px;
+    margin-top: 25px;
+    margin-left: 30px; }
+  .header .rightSide {
+    width: 256px;
+    height: 75px; }
+  .background::after {
+    overflow: hidden; }
+  .background .bullets {
+    transform: translate(-38px); }
+  .background .persons .person.jugg {
+    top: 25px !important;
+    width: 396px !important;
+    height: 682px !important; }
+  .background .pluses .right {
+    right: 115px !important;
+    top: -15px !important; }
+  .background .dirt {
+    background: url("../images/bg/dirt-1440.png") !important; }
+  .content .text .box-content .title-sport__box {
+    margin-left: 195px;
+    margin-top: 38px;
+    max-height: 41px;
+    max-width: 275px;
+    background: url("../images/text/paybox-1440.png") no-repeat; }
+    .content .text .box-content .title-sport__box .title-sport {
+      font-size: 23px;
+      letter-spacing: 0.6px;
+      margin-left: 20px; }
+      .content .text .box-content .title-sport__box .title-sport:before {
+        width: 50px;
+        height: 26px;
+        border-bottom: 1px solid #d6d6ca;
+        left: -4px; }
+      .content .text .box-content .title-sport__box .title-sport:after {
+        left: 11px;
+        top: 110px; }
+  .content .text .bonus-box .bonus-name {
+    font-size: 120px !important;
+    margin-left: 148px !important; }
+    .content .text .bonus-box .bonus-name::before {
+      top: 26px !important;
+      left: 163px !important;
+      border-bottom: 1px solid #d6d6ca !important;
+      width: 146px !important; } }
+
+@media screen and (max-width: 1200px) and (min-width: 550px) {
   .container {
     max-width: 700px;
     margin: 0 auto; }
@@ -441,23 +493,30 @@ footer {
     z-index: 10;
     left: 30%;
     top: 25px; }
-  .background .persons {
-    z-index: 6; }
-    .background .persons .person.pubg {
-      width: 100%;
-      max-width: 485px;
-      left: 460px !important; }
-    .background .persons .person.jugg {
-      max-width: 320px;
-      left: 27% !important;
-      top: 277px !important; }
-    .background .persons .person.tracer {
-      top: 366px !important;
-      right: inherit !important;
-      width: 325px !important;
-      left: 62px; }
+  .background .persons .person.pubg {
+    width: 100%;
+    max-width: 485px;
+    left: 460px !important; }
+  .background .persons .person.jugg {
+    max-width: 320px;
+    left: 27% !important;
+    top: 277px !important; }
+  .background .persons .person.tracer {
+    top: 366px !important;
+    right: inherit !important;
+    width: 325px !important;
+    left: 62px; }
   .background .pluses {
     display: none; }
+  .background::before {
+    background: url("../images/bg/background-over-responsive.png");
+    object-fit: cover; }
+  .background .bullets {
+    background: url("../images/bg/bullet-responsive.png") !important;
+    background-size: cover;
+    transform: translate(-112px); }
+  .background .dirt {
+    background: url("../images/bg/background-dirt.png") !important; }
   .header {
     display: none;
     flex-direction: column;
@@ -467,35 +526,160 @@ footer {
       display: none; }
     .header .rightSide {
       display: none; }
-  .content .text {
-    margin-top: 120px; }
-    .content .text .box-content .title-sport__box {
-      background: url("../images/text/paybox-responsive.png") no-repeat;
-      max-width: 275px;
-      width: 100%;
-      max-height: 45px;
-      margin-left: 144px; }
-      .content .text .box-content .title-sport__box .title-sport {
-        font-size: 26px; }
-        .content .text .box-content .title-sport__box .title-sport:before {
-          height: 27px; }
-        .content .text .box-content .title-sport__box .title-sport:after {
-          top: 110px;
-          left: -5px; }
-    .content .text .box-content .bonus-box .bonus-name {
-      margin-left: 75px;
-      font-size: 120px; }
-    .content .text .box-content .bonus-box .bonus-price {
-      font-size: 120px; }
-  .content .copyright-box {
-    display: flex;
-    justify-content: flex-end; }
-    .content .copyright-box .copyright-title {
-      font-size: 20px;
-      opacity: 0.4;
-      text-transform: uppercase;
-      margin-right: 80px; }
   .content {
-    display: none; }
+    height: 100%;
+    max-height: 1259px; }
+    .content .text {
+      margin-top: 120px; }
+      .content .text .box-content .title-sport__box {
+        background: url("../images/text/paybox-responsive.png") no-repeat;
+        max-width: 275px;
+        width: 100%;
+        max-height: 45px;
+        margin-left: 144px; }
+        .content .text .box-content .title-sport__box .title-sport {
+          font-size: 26px; }
+          .content .text .box-content .title-sport__box .title-sport:before {
+            height: 27px; }
+          .content .text .box-content .title-sport__box .title-sport:after {
+            top: 110px;
+            left: -5px; }
+      .content .text .box-content .bonus-box:before {
+        top: 75px;
+        left: 310px;
+        width: 50px; }
+      .content .text .box-content .bonus-box .letter-bonus {
+        content: url("../images/text/letter-bonus-resp.png");
+        left: 259px;
+        top: 39px; }
+      .content .text .box-content .bonus-box .bonus-name {
+        margin-left: 75px;
+        font-size: 120px; }
+        .content .text .box-content .bonus-box .bonus-name:before {
+          top: 28px;
+          left: 93px;
+          width: 140px; }
+        .content .text .box-content .bonus-box .bonus-name:after {
+          top: 63px;
+          width: 27px;
+          left: 206px; }
+      .content .text .box-content .bonus-box .bonus-price {
+        font-size: 120px; }
+        .content .text .box-content .bonus-box .bonus-price::before {
+          top: 58px;
+          left: 219px;
+          border-bottom: 12px solid #000000; }
+        .content .text .box-content .bonus-box .bonus-price::after {
+          border-bottom: 12px solid #000;
+          width: 50px;
+          top: 76px;
+          left: 215px; }
+      .content .text .box-content .letter-bonus__white {
+        top: 27px !important;
+        left: 104px !important;
+        background-size: cover;
+        max-width: 379px; }
+      .content .text .box-content .btn-registration {
+        background: url("../images/text/btn-registration-responsive.png") no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-height: 98px;
+        margin-top: 322px;
+        max-width: 420px; }
+        .content .text .box-content .btn-registration .btn-link {
+          font-size: 30px; }
+      .content .text .info-box:before {
+        top: -72px !important;
+        left: 395px !important; }
+      .content .text .info-box::after {
+        left: 420px !important;
+        top: -102px !important;
+        border-bottom: 1px solid #ffffff !important; }
+      .content .text .info-box .registration-info {
+        font-size: 62px !important;
+        margin-left: 37px;
+        letter-spacing: normal !important; }
+    .content .steps {
+      margin-top: 220px; }
+    .content .copyright-box {
+      display: flex;
+      justify-content: flex-end; }
+      .content .copyright-box .copyright-title {
+        font-size: 20px;
+        opacity: 0.4;
+        text-transform: uppercase;
+        margin-right: 80px; }
+    .content .responsive-section {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      max-height: 95px;
+      flex-direction: column;
+      flex-flow: wrap;
+      justify-items: center;
+      justify-content: center; }
+      .content .responsive-section .container .prefooter-section {
+        width: 100%;
+        height: 100%;
+        background: url("../images/header/header-right-logo.png") no-repeat;
+        margin-left: 90px;
+        margin-top: 28px; }
+      .content .responsive-section .container .copyright-box {
+        justify-content: space-around;
+        margin-right: 15px; }
+        .content .responsive-section .container .copyright-box .copyright-title {
+          margin-top: 20px;
+          font-size: 14px; }
   footer {
-    display: none; } }
+    height: 100%;
+    max-height: 120px; }
+    footer .left-col {
+      display: none; }
+    footer .right-col {
+      display: none; }
+    footer .center-clo {
+      display: none; }
+    footer .footer-responsive {
+      display: flex;
+      width: 100%; }
+      footer .footer-responsive .left-col__responsive .age-section {
+        margin-bottom: 45px;
+        margin-left: 13px; }
+      footer .footer-responsive .center-col__responsive {
+        margin-left: 145px; }
+        footer .footer-responsive .center-col__responsive .payments__responsive {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          height: 32px; }
+          footer .footer-responsive .center-col__responsive .payments__responsive a {
+            margin-right: 27px; }
+        footer .footer-responsive .center-col__responsive .download__responsive {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          height: 55px; }
+          footer .footer-responsive .center-col__responsive .download__responsive a {
+            margin: 0 7px; }
+            footer .footer-responsive .center-col__responsive .download__responsive a:first-child {
+              margin-left: 0;
+              margin-bottom: 20px; }
+            footer .footer-responsive .center-col__responsive .download__responsive a:last-child {
+              margin-right: 0;
+              margin-bottom: 20px; }
+          footer .footer-responsive .center-col__responsive .download__responsive .icon__responsive {
+            max-width: 115px; }
+      footer .footer-responsive .right-col__responsive {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 32px; }
+        footer .footer-responsive .right-col__responsive .social__responsive {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          margin-left: 50px; }
+          footer .footer-responsive .right-col__responsive .social__responsive a {
+            margin-right: 25px; }
+            footer .footer-responsive .right-col__responsive .social__responsive a:last-child {
+              margin-right: 0; } }
