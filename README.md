@@ -1,5 +1,5 @@
 # pari-match
-Pari Match landing page template for CLICABLE
+Pari Match landing page template for CLICKABLE
 
 Author: Bohdan Torgonsky
 
