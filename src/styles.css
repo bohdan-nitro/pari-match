@@ -907,40 +907,39 @@ footer {
           width: 15px;
           transform: translate(-13px, 14px); } }
 
-@media screen and (max-width: 550px) and (min-width: 320px) {
+@media screen and (max-width: 555px) and (min-width: 320px) {
   .container {
     max-width: 700px;
     margin: 0 auto; }
   .background .header-response {
-    background: url("../images/header/logo-720.png") no-repeat;
+    background: url("../images/header/logo320.png") no-repeat;
     position: absolute;
     z-index: 10;
-    top: 15px;
+    top: 12px;
     width: 100%;
-    left: 276px; }
+    left: 215px;
+    height: 50px; }
   .background .persons .person.pubg {
-    top: 118px !important;
+    top: 61px !important;
     width: 100%;
-    max-width: 320px;
-    left: 383px !important; }
+    max-width: 275px;
+    left: 302px !important; }
   .background .persons .person.jugg {
-    max-width: 200px;
-    left: 275px !important;
-    top: 30px !important;
-    max-height: 885px; }
+    max-width: 192px;
+    left: 199px !important;
+    top: 0 !important;
+    max-height: 832px; }
   .background .persons .person.tracer {
-    top: 126px !important;
+    top: 66px !important;
     right: inherit !important;
-    width: 210px !important;
-    left: 126px; }
-  .background .pluses {
+    width: 180px !important;
+    left: 74px; }
+  .background .persons .pluses {
     display: none; }
-  .background::before {
+  .background .persons::before {
     background: url("../images/bg/background-over-responsive.png");
     object-fit: cover; }
-  .background .bullets {
-    background: url("../images/bg/bullet-responsive.png") !important; }
-  .background .dirt {
+  .background .persons .dirt {
     background: url("../images/bg/dirt-7.png") !important; }
   .header {
     display: none;
@@ -953,9 +952,9 @@ footer {
       display: none; }
   .content {
     height: 100%;
-    max-height: 780px; }
+    max-height: 900px; }
     .content .text {
-      margin-top: 83px;
+      margin-top: 60px;
       height: 500px; }
       .content .text .box-content:before {
         position: absolute;
@@ -968,14 +967,16 @@ footer {
         opacity: 0.9;
         z-index: 1; }
       .content .text .box-content .title-sport__box {
-        background: url("../images/text/paybox-720.png") no-repeat;
-        max-width: 185px;
+        background: url("../images/text/paybox-320.png") no-repeat;
+        max-width: 170px;
         width: 100%;
         max-height: 28px;
-        margin-left: 257px; }
+        margin-left: 184px; }
         .content .text .box-content .title-sport__box .title-sport {
           padding: 6px;
-          font-size: 17px; }
+          font-size: 14px;
+          letter-spacing: 0.4px;
+          margin-left: 7px; }
           .content .text .box-content .title-sport__box .title-sport:before {
             height: 18px;
             left: -9px;
@@ -1008,8 +1009,8 @@ footer {
         top: 107px;
         width: 17px; }
       .content .text .box-content .bonus-box .bonus-name {
-        margin-left: 210px;
-        font-size: 83px; }
+        margin-left: 152px;
+        font-size: 72px; }
         .content .text .box-content .bonus-box .bonus-name:before {
           top: 19px;
           left: 221px;
@@ -1023,8 +1024,8 @@ footer {
           border-bottom: 3px solid #ffffff;
           height: 20px; }
       .content .text .box-content .bonus-box .bonus-price {
-        font-size: 83px;
-        transform: translate(296px, -20px); }
+        font-size: 71px;
+        transform: translate(227px, -17px); }
         .content .text .box-content .bonus-box .bonus-price::before {
           top: 39px;
           left: 154px;
@@ -1043,14 +1044,14 @@ footer {
         background: url("../images/text/btn-registration-responsive.png") no-repeat;
         background-size: cover;
         width: 100%;
-        max-height: 63px !important;
-        margin-top: 180px;
-        max-width: 270px !important;
-        margin-left: 216px !important;
-        padding-top: 22px !important; }
+        max-height: 60px !important;
+        margin-top: 166px;
+        max-width: 258px !important;
+        margin-left: 144px !important;
+        padding-top: 19px !important; }
         .content .text .btn-registration .btn-link {
-          font-size: 21px !important;
-          margin-left: 47px !important;
+          font-size: 20px !important;
+          margin-left: 48px !important;
           letter-spacing: normal !important; }
     .content .info-box:before {
       background: url("../images/text/cross-720.png") no-repeat !important;
@@ -1064,39 +1065,42 @@ footer {
       border-bottom: 1px solid #f8ff13 !important;
       opacity: 0.4; }
     .content .info-box .registration-info {
-      font-size: 40px !important;
-      margin-left: 176px;
+      font-size: 36px !important;
+      margin-left: 117px;
       letter-spacing: normal !important;
       margin-top: 16px; }
   .steps {
-    margin-top: 45px; }
+    margin-top: 0; }
     .steps .steps-wrap {
-      justify-content: center; }
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px; }
       .steps .steps-wrap .step {
-        width: 25%; }
+        width: 100%;
+        margin-bottom: 24px; }
         .steps .steps-wrap .step .icon {
-          width: 42px;
-          height: 35px;
-          margin-left: 35px; }
+          width: 53px;
+          height: 45px; }
           .steps .steps-wrap .step .icon .number {
-            line-height: 35px;
-            font-size: 18px; }
+            line-height: 45px;
+            font-size: 25px; }
         .steps .steps-wrap .step .title {
-          font-size: 16px; }
+          font-size: 23px; }
         .steps .steps-wrap .step .icon-middle {
-          width: 42px;
-          height: 35px;
-          margin-left: 20px; }
+          width: 56px;
+          height: 45px;
+          margin-left: 0; }
           .steps .steps-wrap .step .icon-middle .number {
-            line-height: 35px;
-            font-size: 18px; }
+            line-height: 45px;
+            font-size: 25px; }
         .steps .steps-wrap .step .icon-last {
-          width: 42px;
-          height: 35px;
-          margin-right: 20px; }
+          width: 53px;
+          height: 45px;
+          margin-right: 0; }
           .steps .steps-wrap .step .icon-last .number {
-            line-height: 35px;
-            font-size: 18px; }
+            line-height: 45px;
+            font-size: 25px; }
   .copyright-box {
     display: flex;
     justify-content: flex-end; }
@@ -1117,16 +1121,17 @@ footer {
     .responsive-section .container .prefooter-section {
       width: 100%;
       height: 100%;
-      background: url("../images/header/right-logo-720.png") no-repeat;
-      margin-left: 228px;
-      margin-top: 22px; }
-    .responsive-section .container .copyright-box {
+      background: url("../images/header/right-logo-320.png") no-repeat;
+      margin-left: 185px;
+      margin-top: 13px; }
+    .responsive-section .copyright-box {
       justify-content: space-around;
       margin-right: 15px;
-      transform: translate(10px, -25px); }
-      .responsive-section .container .copyright-box .copyright-title {
+      transform: translate(10px, -35px) !important; }
+      .responsive-section .copyright-box .copyright-title {
         margin: 0;
-        font-size: 8px; }
+        font-size: 10px !important;
+        opacity: 0.2; }
   footer {
     height: 100%;
     max-height: 80px; }
