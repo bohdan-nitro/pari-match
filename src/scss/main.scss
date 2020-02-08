@@ -8,9 +8,10 @@ $backgroundColor: #f8ff13;
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, span, a {
+h1, h2, h3, h4, span, a, li {
   font-family: $pariMatch;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 ul, ol {

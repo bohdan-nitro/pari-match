@@ -1,9 +1,11 @@
 @import "main.scss";
 
-
 $headerHeight: 70px;
 $footerHeight: 72px;
 $footerColor: #000;
+
+$mainBlack: #110c0a;
+$mainBronze: #7f8300;
 
 .background {
   overflow: hidden;
@@ -63,7 +65,7 @@ $footerColor: #000;
         transform: translateX(-50%);
 
         &.top {
-          top: 5px;
+          top: 0.5%;
           left: 50%;
           width: 422px;
           height: 15px;
@@ -73,8 +75,8 @@ $footerColor: #000;
         &.left {
           width: 422px;
           height: 451px;
-          top: 366px;
-          left: 197px;
+          top: 34%;
+          left: 10.2%;
           background: url("../images/bg/pluses/left.png") no-repeat;
 
         }
@@ -82,8 +84,8 @@ $footerColor: #000;
         &.right {
           width: 422px;
           height: 480px;
-          right: 238px;
-          top: -11px;
+          right: 12.5%;
+          top: -1%;
           transform: translateX(50%);
           background: url("../images/bg/pluses/right.png") no-repeat;
         }
@@ -97,27 +99,27 @@ $footerColor: #000;
 
       .person {
         position: absolute;
+        height: auto;
 
         &.tracer {
-          top: 290px;
+          top: 50%;
           right: 0;
           width: 473px;
-          height: 668px;
+          transform: translateY(-37.5%);
         }
 
         &.pubg {
-          top: 350px;
-          left: -34px;
+          bottom: 0;
+          left: 0;
           width: 847px;
-          height: 671px;
+          transform: translate(-4%, -9%);
         }
 
         &.jugg {
-          top: 5px;
+          top: 50%;
           left: 50%;
-          transform: translateX(-42px);
+          transform: translate(-8%, -59%);
           width: 500px;
-          height: 906px;
         }
 
       }
@@ -143,14 +145,12 @@ $footerColor: #000;
 
   .logo {
     margin-top: 32px;
-    width: 240px;
     height: 74px;
   }
 
   .rightSide {
     margin-top: 8px;
-    width: 330px;
-    height: 109px;
+    height: 110px;
   }
 
 }
@@ -162,51 +162,74 @@ $footerColor: #000;
   z-index: 10;
   overflow: hidden;
 
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+  }
+
   .text {
-    height: 620px;
-
-
     .box-content {
-
 
       .title-sport__box {
         position: relative;
         width: 100%;
-        max-width: 351px;
-        background: url("../images/text/paybox.png");
-        height: 51px;
+        max-width: 340px;
+        height: 50px;
         text-align: center;
         align-items: center;
-        margin-left: 122px;
-        margin-top: 45px;
+        margin-left: 130px;
+        margin-top: 55px;
+
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          transform: skewX(-15deg);
+        }
+
+        &::before {
+          background-color: $mainBronze;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        }
+        &::after {
+          width: 10px;
+          height: 10px;
+          right: 5px;
+          top: -3px;
+          background-color: $mainBlack;
+        }
 
         .title-sport {
-          padding: 10px;
           font-family: $pariMatch;
           font-size: 33px;
-          text-transform: uppercase;
           color: #ffff;
           align-items: center;
+          letter-spacing: 0.3px;
+          line-height: 50px;
 
           &:before {
-            content: "";
+            content: '';
             position: absolute;
             width: 55px;
-            height: 36px;
-            border-bottom: 1px solid #ffffff;
-            left: -18px;
+            height: 2px;
+            background-color: #fff;
+            left: -20px;
+            bottom: 5px;
           }
-          &::after  {
-            content: url("../images/text/cross2.png");
+          &::after {
+            content: '';
             position: absolute;
             left: 0;
             top: 135px;
             z-index: 2;
+            background: url("../images/text/icon-plus.png");
           }
 
-
         }
-
 
       }
 
@@ -215,114 +238,182 @@ $footerColor: #000;
         flex-flow: column;
         width: 100%;
         position: relative;
+        max-height: 297px;
+        margin-top: 20px;
 
-        &:after{
-          content: url("../images/text/letter-dirt.png");
+        .glitches-wrap {
           position: absolute;
-          top: 33px;
-          left: -23px;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 1;
+
+          .glitches {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            > div {
+              position: absolute;
+
+              &.first {
+                background: url("../images/text/icon-plus.png") no-repeat;
+                background-size: cover;
+                width: 10px;
+                height: 10px;
+                left: 450px;
+                bottom: 15px;
+              }
+
+              &.second {
+                background: url("../images/text/icon-plus.png") no-repeat;
+                background-size: cover;
+                width: 14px;
+                height: 14px;
+                top: 75px;
+                left: 125px;
+              }
+
+              &.third {
+                background-color: $mainBronze;
+                width: 8px;
+                height: 6px;
+                left: 560px;
+                top: 150px;
+                transform: skewX(-15deg);
+              }
+
+              &.four {
+                width: 80px;
+                height: 1px;
+                left: 360px;
+                top: 90px;
+                background-color: #d5db14;
+              }
+
+              &.five {
+                background-color: #fff;
+                width: 33px;
+                height: 1px;
+                left: 490px;
+                bottom: 55px;
+              }
+
+              &.six {
+                background-color: #fff;
+                top: 90px;
+                left: 210px;
+                width: 35px;
+                height: 5px;
+                transform: skewX(-15deg);
+              }
+
+              &.seven {
+                background-color: #eff52f;
+                width: 80px;
+                height: 13px;
+                transform: skewX(-15deg);
+                left: 545px;
+                bottom: 105px;
+              }
+
+              &.eight {
+                background-color: #d8de12;
+                width: 25px;
+                height: 8px;
+                left: 35px;
+                top: 117px;
+                transform: skewX(-15deg);
+              }
+
+              &.nine {
+                background-color: #fff;
+                width: 30px;
+                height: 14px;
+                left: 360px;
+                bottom: 105px;
+                transform: skewX(-15deg);
+              }
+
+              &.ten {
+                background-color: #d8de12;
+                top: 20px;
+                left: 60px;
+                width: 190px;
+                height: 1px;
+              }
+
+              &.eleven {
+                background-color: #d8de12;
+                bottom: 10px;
+                left: 195px;
+                width: 148px;
+                height: 1px;
+              }
+
+              &.twelve {
+                background-color: $mainBronze;
+                width: 10px;
+                height: 10px;
+                left: 280px;
+                top: 30px;
+                transform: skewX(-15deg);
+                opacity: 0.8;
+              }
+
+              &.thirteen {
+                background-color: $mainBronze;
+                width: 25px;
+                height: 21px;
+                left: 425px;
+                bottom: 47px;
+                transform: skewX(-15deg);
+                opacity: 0.8;
+              }
+
+            }
+
+          }
+
         }
-        &:before  {
-          content: '';
-          position: absolute;
-          top: 100px;
-          left: 356px;
-          width: 65px;
-          border-bottom: 1px solid #ffffff;
-          height: 10px;
+
+        h2 {
+          position: relative;
+          color: $mainBlack;
+          font-family: $pariMatch;
+          font-size: 160px;
+          letter-spacing: 2.3px;
+          line-height: 130px;
         }
 
         .bonus-name {
-          display: flex;
-          font-family: $pariMatch;
-          font-size: 160px;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-left: 42px;
-
-          &:before  {
-            content: "";
-            position: absolute;
-            top: 40px;
-            left: 37px;
-            border-bottom: 1px solid #ffffff;
-            width: 214px;
-          }
-          &:after {
-            content: "";
-            position: absolute;
-            top: 100px;
-            left: 210px;
-            border-bottom: 5px solid #ffffff;
-            width: 30px;
-            height: 18px;
-          }
-
+          margin-left: 40px;
         }
 
         .bonus-price {
-          font-family: $pariMatch;
-          font-size: 160px;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          transform: translate(203px, -33px);
-
-          &:before  {
-            content: "";
-            position: absolute;
-            border-bottom: 15px solid $footerColor;
-            width: 20px;
-            height: 5px;
-            top: 80px;
-            left: 290px;
-          }
-          &:after {
-            content: "";
-            position: absolute;
-            border-bottom: 15px solid $footerColor;
-            width: 62px;
-            height: 5px;
-            top: 102px;
-            left: 285px;
-          }
-
+          margin-left: 200px;
         }
 
-        .letter-bonus {
-          content: url("../images/text/bonus-dirt.png");
-          position: absolute;
-          top: 37px;
-          left: 37px;
-
-
-
-
-        }
-        .letter-bonus__white  {
-          content: url("../images/text/bonus-dirt-2.png");
-          position: absolute;
-          top: 37px;
-          left: 37px;
-        }
       }
 
       .info-box {
         position: relative;
         width: 100%;
         height: 100%;
-        display: flex;
+        margin: 25px auto 45px;
 
         &::before {
-            content: "";
-            background: url("../images/text/cross-1.png");
-            position: absolute;
-            width: 15px;
-            height: 15px;
+          content: "";
+          background: url("../images/text/cross-1.png");
+          position: absolute;
+          width: 15px;
+          height: 15px;
           top: -80px;
           left: 448px;
 
         }
-        &::after  {
+        &::after {
           content: "";
           position: absolute;
           width: 30px;
@@ -332,154 +423,202 @@ $footerColor: #000;
           border-bottom: 2px solid #ffffff;
         }
 
-
         .registration-info {
           font-family: $pariMatch;
-          font-size: 74px;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          line-height: 1.1;
-          transform: translate(36px, -40px);
-          opacity: 0.4;
+          color: $mainBronze;
+          font-size: 75px;
+          letter-spacing: 1px;
+          margin-left: 37px;
+          line-height: 60px;
         }
 
       }
+
       .btn-registration {
+        position: relative;
+        display: block;
         width: 100%;
-        background: url("../images/text/btn-link.png");
-        background-size: cover;
-        height: 110px;
-        max-width: 470px;
+        height: 105px;
+        max-width: 490px;
         max-height: 120px;
-        padding-top: 31px;
-        margin-left: 66px;
+        margin-left: 55px;
 
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 93%;
+          height: 100%;
+          transform: translateX(-50%) skewX(-15deg);
+        }
 
+        &::before {
+          top: -5px;
+          left: calc(50% - 5px);
+          background-color: $mainBronze;
+          z-index: -3;
+        }
+        &::after {
+          top: 5px;
+          left: calc(50% + 5px);
+          background-color: #fff;
+          z-index: -2;
+        }
 
-
-        .btn-link {
-          padding-top: 29px;
+        .title {
           text-decoration: none;
           color: $backgroundColor;
           font-size: 36px;
-          text-transform: uppercase;
-          margin-left: 77px;
           letter-spacing: 1.3px;
+          line-height: 105px;
+          text-align: center;
+
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            display: block;
+          }
+
+          &::before {
+            top: 0;
+            left: 50%;
+            width: 93%;
+            height: 100%;
+            transform: translateX(-50%) skewX(-15deg);
+            background-color: $mainBlack;
+            z-index: -1;
+          }
+
+          &::after {
+            top: 15px;
+            right: 30px;
+            width: 15px;
+            height: 15px;
+            background-image: url("../images/text/icon-plus.png");
+            z-index: 1;
+          }
+
         }
+
       }
+
     }
-
   }
-}
 
-.steps {
-  margin-top: 30px;
+  .steps {
+    margin-bottom: 8vh;
+    padding: 0 20px;
 
-  .steps-wrap {
-    display: flex;
-    flex-flow: row nowrap;
-
-    .step {
+    .steps-wrap {
       display: flex;
       flex-flow: row nowrap;
-      justify-content: center;
-      align-items: center;
-      width: (100% / 3);
-      font-family: $pariMatch;
 
-      .icon {
-        position: relative;
-        width: 70px;
-        height: 55px;
+      .step {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: (100% / 3);
+        font-family: $pariMatch;
 
-        &::before {
-          content: '';
-          display: block;
-          position: absolute;
-          z-index: -1;
-          background: url("../images/steps/1/step-1.png") no-repeat;
-          background-size: cover;
-          width: 100%;
-          height: 100%;
+        .icon {
+          position: relative;
+          width: 70px;
+          height: 55px;
 
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            background: url("../images/steps/1/step-1.png") no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+
+
+          }
+
+          .number {
+            font-size: 32px;
+            text-align: center;
+            line-height: 55px;
+            font-weight: 400;
+
+          }
+
+        }
+
+        .icon-middle {
+          position: relative;
+          width: 70px;
+          height: 55px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: url("../images/steps/2/step-2.png") no-repeat;
+            background-size: cover;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+          }
+
+          .number {
+            font-size: 32px;
+            text-align: center;
+            line-height: 55px;
+            font-weight: 400;
+
+          }
+
+          .title {
+            font-size: 28px;
+            font-weight: 300;
+            margin-left: 10px;
+          }
+        }
+
+        .icon-last {
+          position: relative;
+          width: 70px;
+          height: 56px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: url("../images/steps/3/step-3.png") no-repeat;
+            background-size: cover;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+          }
+
+          .number {
+            font-size: 32px;
+            text-align: center;
+            line-height: 55px;
+            font-weight: 400;
+
+          }
+
+          .title {
+            font-size: 28px;
+            font-weight: 300;
+            margin-left: 10px;
+          }
 
         }
 
-        .number {
-          font-size: 32px;
-          text-align: center;
-          line-height: 55px;
-          font-weight: 400;
-
-        }
-
-      }
-      .icon-middle  {
-        position: relative;
-        width: 70px;
-        height: 55px;
-
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          background: url("../images/steps/2/step-2.png") no-repeat;
-          background-size: cover;
-          z-index: -1;
-          width: 100%;
-          height: 100%;
-        }
-        .number {
-          font-size: 32px;
-          text-align: center;
-          line-height: 55px;
-          font-weight: 400;
-
-        }
         .title {
           font-size: 28px;
           font-weight: 300;
-          text-transform: uppercase;
           margin-left: 10px;
-        }
-      }
-
-      .icon-last  {
-        position: relative;
-        width: 70px;
-        height: 56px;
-
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          background: url("../images/steps/3/step-3.png") no-repeat;
-          background-size: cover;
-          z-index: -1;
-          width: 100%;
-          height: 100%;
-        }
-        .number {
-          font-size: 32px;
-          text-align: center;
-          line-height: 55px;
-          font-weight: 400;
-
-        }
-        .title {
-          font-size: 28px;
-          font-weight: 300;
-          text-transform: uppercase;
-          margin-left: 10px;
+          letter-spacing: 1.2px;
         }
 
-      }
-
-      .title {
-        font-size: 28px;
-        font-weight: 300;
-        text-transform: uppercase;
-        margin-left: 10px;
       }
 
     }
@@ -488,14 +627,15 @@ $footerColor: #000;
 
 }
 
-.copyright-box  {
+.copyright-box {
   display: none;
 }
 
-
-
-footer {
-  position: relative;
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -563,6 +703,10 @@ footer {
     }
 
   }
+  
+  .center-col {
+    margin-right: 75px;
+  }
 
 }
 
@@ -572,9 +716,8 @@ footer {
   margin: 0 auto;
 }
 
-.footer-responsive  {
+.footer-responsive {
   display: none;
 }
-
 
 @import "responsive.scss";
