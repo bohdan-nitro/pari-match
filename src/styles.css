@@ -398,7 +398,8 @@ img {
         z-index: 1; }
   .content .steps {
     margin-bottom: 8vh;
-    padding: 0 20px; }
+    padding: 0 15px;
+    margin-left: 20px; }
     .content .steps .steps-wrap {
       display: flex;
       flex-flow: row nowrap; }
@@ -409,68 +410,73 @@ img {
         align-items: center;
         width: 33.33333%;
         font-family: "Parimatch"; }
+        .content .steps .steps-wrap .step:first-child .icon::before {
+          background-color: #7e8200;
+          width: 15px;
+          height: 13px;
+          z-index: 2;
+          bottom: -5px;
+          right: 25px; }
+        .content .steps .steps-wrap .step:first-child .icon::after {
+          background-color: #110c0a;
+          height: 40px;
+          width: 42px;
+          top: -5px;
+          left: 8px; }
+        .content .steps .steps-wrap .step:nth-child(2) .icon::before {
+          background-color: #110c0a;
+          height: 14px;
+          width: 13px;
+          bottom: 7px;
+          left: 10px;
+          z-index: 2; }
+        .content .steps .steps-wrap .step:nth-child(2) .icon::after {
+          background-color: #110c0a;
+          height: 15px;
+          width: 15px;
+          top: -1px;
+          right: 2px; }
+        .content .steps .steps-wrap .step:nth-child(3) .icon::before {
+          background-color: #110c0a;
+          height: 15px;
+          width: 10px;
+          bottom: 7px;
+          left: 4px;
+          z-index: 2; }
+        .content .steps .steps-wrap .step:nth-child(3) .icon::after {
+          background-color: #110c0a;
+          height: 30px;
+          width: 40px;
+          bottom: -3px;
+          left: 2px; }
         .content .steps .steps-wrap .step .icon {
           position: relative;
           width: 70px;
           height: 55px; }
-          .content .steps .steps-wrap .step .icon::before {
+          .content .steps .steps-wrap .step .icon::before, .content .steps .steps-wrap .step .icon::after {
             content: '';
             display: block;
             position: absolute;
             z-index: -1;
-            background: url("../images/steps/1/step-1.png") no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%; }
+            transform: skewX(-15deg); }
           .content .steps .steps-wrap .step .icon .number {
+            position: relative;
+            z-index: 1;
             font-size: 32px;
             text-align: center;
             line-height: 55px;
             font-weight: 400; }
-        .content .steps .steps-wrap .step .icon-middle {
-          position: relative;
-          width: 70px;
-          height: 55px; }
-          .content .steps .steps-wrap .step .icon-middle::before {
-            content: "";
-            display: block;
-            position: absolute;
-            background: url("../images/steps/2/step-2.png") no-repeat;
-            background-size: cover;
-            z-index: -1;
-            width: 100%;
-            height: 100%; }
-          .content .steps .steps-wrap .step .icon-middle .number {
-            font-size: 32px;
-            text-align: center;
-            line-height: 55px;
-            font-weight: 400; }
-          .content .steps .steps-wrap .step .icon-middle .title {
-            font-size: 28px;
-            font-weight: 300;
-            margin-left: 10px; }
-        .content .steps .steps-wrap .step .icon-last {
-          position: relative;
-          width: 70px;
-          height: 56px; }
-          .content .steps .steps-wrap .step .icon-last::before {
-            content: "";
-            display: block;
-            position: absolute;
-            background: url("../images/steps/3/step-3.png") no-repeat;
-            background-size: cover;
-            z-index: -1;
-            width: 100%;
-            height: 100%; }
-          .content .steps .steps-wrap .step .icon-last .number {
-            font-size: 32px;
-            text-align: center;
-            line-height: 55px;
-            font-weight: 400; }
-          .content .steps .steps-wrap .step .icon-last .title {
-            font-size: 28px;
-            font-weight: 300;
-            margin-left: 10px; }
+            .content .steps .steps-wrap .step .icon .number::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 50%;
+              display: block;
+              background-color: #fff;
+              z-index: -1;
+              width: 55px;
+              height: 55px;
+              transform: skewX(-15deg) translateX(-50%); }
         .content .steps .steps-wrap .step .title {
           font-size: 28px;
           font-weight: 300;
@@ -577,6 +583,56 @@ img {
           width: 45px; }
     .content .text .box-content .bonus-box {
       margin-top: 15px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.first {
+        left: 360px;
+        bottom: 10px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.second {
+        top: 58px;
+        left: 110px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.third {
+        left: 440px;
+        top: 110px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.four {
+        left: 280px;
+        top: 70px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.five {
+        width: 25px;
+        left: 390px;
+        bottom: 45px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.six {
+        top: 65px;
+        left: 180px;
+        width: 25px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.seven {
+        width: 60px;
+        height: 10px;
+        left: 430px;
+        bottom: 80px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.eight {
+        left: 40px;
+        top: 85px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.nine {
+        width: 20px;
+        height: 10px;
+        left: 295px;
+        bottom: 80px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.ten {
+        top: 15px;
+        left: 65px;
+        width: 145px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.eleven {
+        left: 164px;
+        width: 115px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.twelve {
+        width: 8px;
+        height: 8px;
+        left: 230px;
+        top: 20px; }
+      .content .text .box-content .bonus-box .glitches-wrap .glitches > div.thirteen {
+        width: 15px;
+        height: 15px;
+        left: 340px;
+        bottom: 37px; }
       .content .text .box-content .bonus-box h2 {
         font-size: 120px;
         line-height: 98px; }
@@ -601,6 +657,14 @@ img {
         .content .text .box-content .btn-registration .title::after {
           top: 10px;
           right: 20px; }
+    .content .steps {
+      padding: 0 75px; }
+      .content .steps .steps-wrap .step .icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: auto; }
+      .content .steps .steps-wrap .step .title {
+        font-size: 21px; }
   .footer {
     height: 54px;
     padding: 0 45px; }

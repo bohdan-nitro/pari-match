@@ -96,6 +96,90 @@
         .bonus-box {
           margin-top: 15px;
 
+          .glitches-wrap {
+            .glitches {
+              > div {
+
+                &.first {
+                  left: 360px;
+                  bottom: 10px;
+                }
+
+                &.second {
+                  top: 58px;
+                  left: 110px;
+                }
+
+                &.third {
+                  left: 440px;
+                  top: 110px;
+                }
+
+                &.four {
+                  left: 280px;
+                  top: 70px;
+                }
+
+                &.five {
+                  width: 25px;
+                  left: 390px;
+                  bottom: 45px;
+                }
+
+                &.six {
+                  top: 65px;
+                  left: 180px;
+                  width: 25px;
+                }
+
+                &.seven {
+                  width: 60px;
+                  height: 10px;
+                  left: 430px;
+                  bottom: 80px;
+                }
+
+                &.eight {
+                  left: 40px;
+                  top: 85px;
+                }
+
+                &.nine {
+                  width: 20px;
+                  height: 10px;
+                  left: 295px;
+                  bottom: 80px;
+                }
+
+                &.ten {
+                  top: 15px;
+                  left: 65px;
+                  width: 145px;
+                }
+
+                &.eleven {
+                  left: 164px;
+                  width: 115px;
+                }
+
+                &.twelve {
+                  width: 8px;
+                  height: 8px;
+                  left: 230px;
+                  top: 20px;
+                }
+
+                &.thirteen {
+                  width: 15px;
+                  height: 15px;
+                  left: 340px;
+                  bottom: 37px;
+                }
+
+              }
+            }
+          }
+
           h2 {
             font-size: 120px;
             line-height: 98px;
@@ -141,6 +225,28 @@
 
         }
         
+      }
+
+    }
+
+    .steps {
+      padding: 0 75px;
+
+      .steps-wrap {
+        .step {
+
+          .icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: auto;
+
+          }
+
+          .title {
+            font-size: 21px;
+          }
+
+        }
       }
 
     }
