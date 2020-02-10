@@ -3,7 +3,7 @@
   .container {
     width: 810px;
   }
-  
+
   .background {
 
     > div {
@@ -84,11 +84,11 @@
             font-size: 23px;
             letter-spacing: 1px;
             line-height: 40px;
-            
+
             &::before {
               width: 45px;
             }
-            
+
           }
 
         }
@@ -224,7 +224,7 @@
           }
 
         }
-        
+
       }
 
     }
@@ -264,13 +264,13 @@
         height: 100%;
         margin-right: 20px;
       }
-      
+
     }
 
     .center-col {
       margin-right: 0;
     }
-    
+
     .download {
       height: 30px;
 
@@ -320,21 +320,21 @@
 
       .person {
         &.pubg {
-          top: 118px !important;
+          top: 173px !important;
           width: 100%;
           max-width: 320px;
-          left: 383px !important;
+          left: 398px !important;
         }
 
         &.jugg {
-          max-width: 200px;
-          left: 275px !important;
+          max-width: 205px;
+          left: 248px !important;
           top: 30px !important;
-          max-height: 885px;
+          max-height: 15px;
         }
 
         &.tracer {
-          top: 126px !important;
+          top: 378px !important;
           right: inherit !important;
           width: 210px !important;
           left: 126px;
@@ -385,226 +385,313 @@
     max-height: 780px;
 
     .text {
-      margin-top: 83px;
+      margin-top: 45px;
       height: 500px;
 
       .box-content {
-        &:before {
-          position: absolute;
-          content: '';
-          border-bottom: 4px solid $backgroundColor;
-          left: 490px;
-          top: 184px;
-          width: 18px;
-          height: 10px;
-          opacity: 0.9;
-          z-index: 1;
-        }
+
 
         .title-sport__box {
-          background: url("../images/text/paybox-720.png") no-repeat;
-          max-width: 185px;
-          width: 100%;
-          max-height: 28px;
-          margin-left: 257px;
+          max-width: 180px;
+          height: 26px;
+          margin-left: 261px;
+          margin-top: 40px;
+
+          &::after {
+            width: 5px;
+            height: 5px;
+            right: 5px;
+            top: -1px;
+          }
 
           .title-sport {
-            padding: 6px;
-            font-size: 17px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 26px;
 
-            &:before {
-              height: 18px;
-              left: -9px;
-              width: 31px;
+            &::before {
+              width: 30px;
+              bottom: 2px;
+              height: 1px;
+              left: -11px;
+              background-color: $backgroundColor;
               opacity: 0.5;
-              border-bottom: 1px solid $backgroundColor;
-            }
-
-            &:after {
-              content: url("../images/text/cross-720.png");
-              top: 71px;
-              left: 0;
             }
 
           }
+
         }
 
-        .bonus-box {
-          &:before {
-            top: 126px;
-            left: 295px;
-            width: 63px;
-            z-index: 1;
-            opacity: 0.4;
-            border-bottom: 1px solid $backgroundColor;
+        .bonus-box, h2 {
+          margin-top: 6px;
+          line-height: 62px !important;
+
+          .glitches-wrap {
+
+            .glitches {
+              > div {
+                &.first {
+                  width: 8px;
+                  height: 8px;
+                  left: 428px;
+                  bottom: 5px;
+                }
+
+                &.second {
+                  width: 8px;
+                  height: 8px;
+                  top: 43px;
+                  left: 255px;
+                }
+
+                &.third {
+                  left: 339px;
+                  top: 17px;
+                }
+
+                &.four {
+                  width: 35px;
+                  left: 376px;
+                  top: 49px;
+                }
+
+                &.five {
+                  width: 15px;
+                  height: 1px;
+                  left: 452px;
+                  bottom: 28px;
+                  background: #d8de12;
+                  opacity: 0.5;
+                }
+
+                &.six {
+                  top: 48px;
+                  left: 304px;
+                  width: 17px;
+                  height: 2px;
+                }
+
+                &.seven {
+                  width: 25px;
+                  height: 5px;
+                  left: 478px;
+                  bottom: 55px;
+                }
+
+                &.eight {
+                  height: 8px;
+                  left: 199px;
+                  top: 60px;
+                }
+
+                &.nine {
+                  width: 15px;
+                  height: 7px;
+                  left: 383px;
+                  bottom: 54px;
+                }
+
+                &.ten {
+                  top: 12px;
+                  left: 219px;
+                  width: 99px;
+                  opacity: 0.5;
+                }
+
+                &.eleven {
+                  bottom: 4px;
+                  left: 291px;
+                  width: 67px;
+                  opacity: 0.5;
+                }
+
+                &.twelve {
+                  display: none;
+                }
+
+                &.thirteen {
+                  width: 11px;
+                  height: 11px;
+                  left: 416px;
+                  bottom: 24px;
+                }
+              }
+            }
+
           }
 
-          &:after {
-            position: absolute;
-            content: '';
-            border-bottom: 7px solid $backgroundColor;
-            left: 208px;
-            top: 58px;
-            width: 16px;
-            height: 10px;
-            opacity: 0.9;
-          }
-
-          .letter-bonus {
-            content: url("../images/text/letter-bonus-resp.png");
-            left: 413px;
-            top: 107px;
-            width: 17px;
-
-          }
 
           .bonus-name {
-            margin-left: 210px;
+            margin-left: 208px;
             font-size: 83px;
 
-            &:before {
-              top: 19px;
-              left: 221px;
-              width: 100px;
-              opacity: 0.4;
-              border-bottom: 1px solid $backgroundColor;
-            }
-
-            &:after {
-              top: 35px;
-              width: 16px;
-              left: 304px;
-              border-bottom: 3px solid #ffffff;
-              height: 20px;
-            }
           }
 
           .bonus-price {
             font-size: 83px;
-            transform: translate(296px, -20px);
+            margin-left: 293px;
 
-            &::before {
-              top: 39px;
-              left: 154px;
-              border-bottom: 7px solid #000000;
-            }
+          }
+        }
+
+        .info-box {
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+
+
+          .registration-info {
+            font-size: 40px;
+            margin-left: 213px;
+            line-height: 0;
+            letter-spacing: normal;
+            margin-top: 16px;
+          }
+        }
+
+        .btn-registration {
+          width: 100%;
+          max-height: 63px;
+          margin-top: 245px;
+          max-width: 270px;
+          margin-left: 216px;
+
+          &::before {
+            left: calc(50% - 4px);
+            top: 0;
+          }
+
+          &::after {
+            top: 2px;
+            left: calc(50% - -3px);
+          }
+
+          .title {
+            font-size: 20px;
+            line-height: 66px;
+            letter-spacing: 0.6px;
 
             &::after {
-              border-bottom: 7px solid #000;
-              width: 32px;
-              top: 51px;
-              left: 151px;
+              background-image: none;
             }
           }
         }
-
-      }
-
-      .letter-bonus__white {
-        top: 9px !important;
-        left: 205px !important;
-        background-size: cover;
-        max-width: 299px;
-      }
-
-      .btn-registration {
-        background: url("../images/text/btn-registration-responsive.png") no-repeat;
-        background-size: cover;
-        width: 100%;
-        max-height: 63px !important;
-        margin-top: 180px;
-        max-width: 270px !important;
-        margin-left: 216px !important;
-        padding-top: 22px !important;
-
-        .btn-link {
-          font-size: 21px !important;
-          margin-left: 47px !important;
-          letter-spacing: normal !important;
-        }
-
       }
     }
 
-    .info-box {
-      &:before {
-        background: url("../images/text/cross-720.png") no-repeat !important;
-        top: -44px !important;
-        left: 426px !important;
-        width: 8px !important;
-        height: 8px !important;
+    .steps {
+      margin-bottom: 13vh;
+      padding: 0 90px 0 120px;
+      margin-left: 0;
+
+      .steps-wrap {
+        justify-content: center;
+
+        .step {
+          &:first-child {
+            .icon {
+              &::before {
+                width: 8px;
+                height: 8px;
+                bottom: 1px;
+                right: 13px;
+              }
+
+              &::after {
+                height: 33px;
+                width: 26px;
+                top: -3px;
+                left: 3px;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .icon {
+              &::before {
+                height: 8px;
+                width: 8px;
+                bottom: 8px;
+                left: 0;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .icon {
+              &::before {
+                height: 8px;
+                width: 8px;
+                bottom: 8px;
+                left: 0;
+                opacity: 0.4;
+              }
+
+              &::after {
+                height: 31px;
+                width: 27px;
+                bottom: 2px;
+                left: 3px;
+              }
+            }
+          }
+
+          .icon {
+            width: 42px;
+            height: 35px;
+
+
+            .number {
+              line-height: 31px;
+              font-size: 18px;
+
+              &::before {
+                width: 35px;
+                height: 31px;
+              }
+            }
+
+          }
+
+          .title {
+            font-size: 16px;
+
+
+          }
+
+          .icon-middle {
+            width: 42px;
+            height: 35px;
+            margin-left: 20px;
+
+            .number {
+              line-height: 35px;
+              font-size: 18px;
+            }
+          }
+
+          .icon-last {
+            width: 42px;
+            height: 35px;
+            margin-right: 20px;
+
+            .number {
+              line-height: 35px;
+              font-size: 18px;
+            }
+
+          }
+
+        }
       }
 
-      &::after {
-        left: 450px !important;
-        top: -70px !important;
-        border-bottom: 1px solid $backgroundColor !important;
-        opacity: 0.4;
-      }
-
-      .registration-info {
-        font-size: 40px !important;
-        margin-left: 176px;
-        letter-spacing: normal !important;
-        margin-top: 16px;
-      }
     }
   }
 
-  .steps {
-    margin-top: 45px;
-
-    .steps-wrap {
-      justify-content: center;
-
-      .step {
-        width: 25%;
-
-        .icon {
-          width: 42px;
-          height: 35px;
-          margin-left: 35px;
-
-          .number {
-            line-height: 35px;
-            font-size: 18px;
-          }
-
-        }
-
-        .title {
-          font-size: 16px;
-
-
-        }
-
-        .icon-middle {
-          width: 42px;
-          height: 35px;
-          margin-left: 20px;
-
-          .number {
-            line-height: 35px;
-            font-size: 18px;
-          }
-        }
-
-        .icon-last {
-          width: 42px;
-          height: 35px;
-          margin-right: 20px;
-
-          .number {
-            line-height: 35px;
-            font-size: 18px;
-          }
-
-        }
-
-      }
-    }
-
-  }
 
   .copyright-box {
     display: flex;
@@ -634,8 +721,10 @@
         width: 100%;
         height: 100%;
         background: url("../images/header/right-logo-720.png") no-repeat;
-        margin-left: 228px;
-        margin-top: 22px;
+        position: absolute;
+        left: 33%;
+        top: 88%;
+
 
       }
 
@@ -664,7 +753,7 @@
       display: none;
     }
 
-    .center-clo {
+    .center-col {
       display: none;
     }
 
@@ -785,7 +874,7 @@
 
 }
 
-@media screen and (max-width: 555px) and (min-width: 320px) {
+@media screen and (max-width: 555px) {
 
   .container {
     max-width: 700px;
