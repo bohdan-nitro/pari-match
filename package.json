@@ -1,7 +1,7 @@
 {
   "name": "pari-match",
   "version": "1.0.0",
-  "description": "Pari Match - Test task for CLICABLE",
+  "description": "Pari Match - Test task for CLICKABLE",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,7 @@
     "pari",
     "match",
     "task",
-    "clicable"
+    "clickable"
   ],
   "author": "Bohdan Torgonsky",
   "license": "ISC",
