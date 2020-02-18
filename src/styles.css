@@ -720,10 +720,10 @@ img {
   .background > div::before {
     background: url("../images/bg/background-over-responsive.png");
     object-fit: cover; }
-  .background > div .bullets {
-    background: url("../images/bg/bullet-responsive.png") !important; }
-  .background > div .dirt {
-    background: url("../images/bg/dirt-7.png") !important; }
+  .background > div.bullets {
+    background: url("../images/bg/bullet-responsive.png"); }
+  .background > div.dirt {
+    background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -1885,31 +1885,38 @@ img {
     z-index: 10;
     top: 15px;
     width: 100%;
-    left: 276px; }
+    left: 39%;
+    height: 60px; }
+  .background::before {
+    background: url("../images/bg/bg-ipad.png") no-repeat;
+    object-fit: cover;
+    background-size: cover; }
   .background > div.persons .person.pubg {
     left: 53%;
-    top: 33%;
+    top: 36%;
     width: 315px;
     height: 250px; }
   .background > div.persons .person.jugg {
     max-width: 300px;
     left: 33%;
-    top: 49%;
+    top: 52%;
     height: 380px; }
   .background > div.persons .person.tracer {
-    top: 40%;
+    top: 43%;
     width: 220px;
     left: 17%;
     height: 310px; }
   .background > div.pluses {
     display: none; }
   .background > div::before {
-    background: url("../images/bg/background-over-responsive.png");
-    object-fit: cover; }
-  .background > div .bullets {
-    background: url("../images/bg/bullet-responsive.png") !important; }
-  .background > div .dirt {
-    background: url("../images/bg/dirt-7.png") !important; }
+    background: url("../images/bg/bg-ipad.png");
+    object-fit: cover;
+    background-size: cover; }
+  .background > div.bullets {
+    background: url("../images/bg/bullet-768.png");
+    background-size: cover; }
+  .background > div.dirt {
+    background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -2028,7 +2035,7 @@ img {
       .content .text .box-content .btn-registration {
         width: 100%;
         max-height: 63px;
-        margin-top: 245px;
+        margin-top: 285px;
         max-width: 270px;
         margin-left: 216px; }
         .content .text .box-content .btn-registration::before {
@@ -2100,14 +2107,6 @@ img {
           .content .steps .steps-wrap .step .icon-last .number {
             line-height: 35px;
             font-size: 18px; }
-  .copyright-box {
-    display: flex;
-    justify-content: flex-end; }
-    .copyright-box .copyright-title {
-      font-size: 20px;
-      opacity: 0.4;
-      text-transform: uppercase;
-      margin-right: 80px; }
   .responsive-section {
     display: flex;
     width: 100%;
@@ -2123,14 +2122,14 @@ img {
       background: url("../images/header/right-logo-720.png") no-repeat;
       position: absolute;
       left: 33%;
-      top: 88%; }
+      top: 89%; }
     .responsive-section .container .copyright-box {
       justify-content: space-around;
       margin-right: 15px;
-      transform: translate(10px, -25px); }
+      transform: translate(0px, -25px); }
       .responsive-section .container .copyright-box .copyright-title {
         margin: 0;
-        font-size: 8px; }
+        font-size: 11px; }
   .footer {
     height: 100%;
     max-height: 80px; }
@@ -2143,44 +2142,47 @@ img {
     .footer .footer-responsive {
       display: flex;
       width: 100%;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 0 50px; }
       .footer .footer-responsive .left-col__responsive .age-section {
-        margin-left: 69px;
+        margin-left: 0;
         margin-top: 12px;
         width: 20px; }
-    .footer .center-col__responsive .payments__responsive {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      height: 32px;
-      margin-left: 100px;
-      transform: translate(10px, -9px); }
-      .footer .center-col__responsive .payments__responsive a {
-        margin-right: 17px; }
-      .footer .center-col__responsive .payments__responsive .icon-visa {
-        max-width: 25px; }
-      .footer .center-col__responsive .payments__responsive .icon-master {
-        max-width: 25px; }
-      .footer .center-col__responsive .payments__responsive .icon-qiwi {
-        max-width: 40px; }
-      .footer .center-col__responsive .payments__responsive .icon-yandex {
-        max-width: 50px; }
-    .footer .center-col__responsive .download__responsive {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      height: 42px;
-      margin-top: 15px;
-      transform: translate(38px, -2px); }
-      .footer .center-col__responsive .download__responsive a {
-        margin: 0 7px; }
-        .footer .center-col__responsive .download__responsive a:first-child {
-          margin-left: 39px;
-          margin-bottom: 10px; }
-        .footer .center-col__responsive .download__responsive a:last-child {
-          margin-bottom: 10px; }
-      .footer .center-col__responsive .download__responsive .icon__responsive {
-        max-width: 70px; }
+    .footer .center-col__responsive {
+      margin: 0 auto; }
+      .footer .center-col__responsive .payments__responsive {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 32px;
+        margin-left: 100px;
+        transform: translate(10px, -9px); }
+        .footer .center-col__responsive .payments__responsive a {
+          margin-right: 17px; }
+        .footer .center-col__responsive .payments__responsive .icon-visa {
+          max-width: 25px; }
+        .footer .center-col__responsive .payments__responsive .icon-master {
+          max-width: 25px; }
+        .footer .center-col__responsive .payments__responsive .icon-qiwi {
+          max-width: 40px; }
+        .footer .center-col__responsive .payments__responsive .icon-yandex {
+          max-width: 50px; }
+      .footer .center-col__responsive .download__responsive {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        height: 42px;
+        margin-top: 15px;
+        transform: translate(38px, -2px); }
+        .footer .center-col__responsive .download__responsive a {
+          margin: 0 7px; }
+          .footer .center-col__responsive .download__responsive a:first-child {
+            margin-left: 39px;
+            margin-bottom: 10px; }
+          .footer .center-col__responsive .download__responsive a:last-child {
+            margin-bottom: 10px; }
+        .footer .center-col__responsive .download__responsive .icon__responsive {
+          max-width: 70px; }
     .footer .right-col__responsive {
       display: flex;
       flex-flow: row nowrap;
@@ -2243,15 +2245,15 @@ img {
       max-width: 130px;
       height: 150px;
       top: 42%; }
-    .background > div .pluses {
+    .background > div.pluses {
       display: none; }
     .background > div::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -2675,15 +2677,15 @@ img {
       max-width: 130px;
       height: 150px;
       top: 42%; }
-    .background > div .pluses {
+    .background > div.pluses {
       display: none; }
     .background > div::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -2790,11 +2792,11 @@ img {
         .content .text .box-content .bonus-box .bonus-name, .content .text .box-content h2 .bonus-name {
           margin: 0 auto;
           font-size: 40px;
-          transform: translateX(-19%); }
+          transform: translateX(-38%); }
         .content .text .box-content .bonus-box .bonus-price, .content .text .box-content h2 .bonus-price {
           font-size: 40px;
           margin: 0 auto;
-          transform: translate(21%); }
+          transform: translate(1%); }
       .content .text .box-content .info-box {
         margin: 15px auto; }
         .content .text .box-content .info-box::before {
@@ -3106,15 +3108,15 @@ img {
       max-width: 120px;
       height: 200px;
       top: 44%; }
-    .background > div .pluses {
+    .background > div.pluses {
       display: none; }
     .background > div::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -3526,15 +3528,15 @@ img {
       max-width: 130px;
       height: 200px;
       top: 39%; }
-    .background > div .pluses {
+    .background > div.pluses {
       display: none; }
     .background > div::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -3948,15 +3950,15 @@ img {
       max-width: 143px;
       height: 230px;
       top: 38%; }
-    .background > div.persons .pluses {
+    .background > div.persons.pluses {
       display: none; }
     .background > div.persons::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.persons.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div.persons .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.persons.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;
@@ -4370,15 +4372,15 @@ img {
       max-width: 130px;
       height: 230px;
       top: 38%; }
-    .background > div.persons .pluses {
+    .background > div.persons.pluses {
       display: none; }
     .background > div.persons::before {
       background: url("../images/bg/bg-over-320-420.png");
       object-fit: cover; }
     .background > div.persons.bullets {
       background: url("../images/bg/bullet-320-420.png"); }
-    .background > div.persons .dirt {
-      background: url("../images/bg/dirt-7.png") !important; }
+    .background > div.persons.dirt {
+      background: url("../images/bg/dirt-7.png"); }
   .header {
     display: none;
     flex-direction: column;

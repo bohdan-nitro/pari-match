@@ -354,12 +354,12 @@
         object-fit: cover;
       }
 
-      .bullets {
-        background: url("../images/bg/bullet-responsive.png") !important;
+      &.bullets {
+        background: url("../images/bg/bullet-responsive.png");
       }
 
-      .dirt {
-        background: url("../images/bg/dirt-7.png") !important;
+      &.dirt {
+        background: url("../images/bg/dirt-7.png");
       }
     }
 
@@ -2341,8 +2341,14 @@
       z-index: 10;
       top: 15px;
       width: 100%;
-      left: 276px;
+      left: 39%;
+      height: 60px;
 
+    }
+    &::before {
+      background: url("../images/bg/bg-ipad.png") no-repeat;
+      object-fit: cover;
+      background-size: cover;
     }
 
     > div {
@@ -2352,7 +2358,7 @@
         .person {
           &.pubg {
             left: 53%;
-            top: 33%;
+            top: 36%;
             width: 315px;
             height: 250px;
           }
@@ -2360,12 +2366,12 @@
           &.jugg {
             max-width: 300px;
             left: 33%;
-            top: 49%;
+            top: 52%;
             height: 380px;
           }
 
           &.tracer {
-            top: 40%;
+            top: 43%;
             width: 220px;
             left: 17%;
             height: 310px;
@@ -2379,16 +2385,18 @@
       }
 
       &::before {
-        background: url("../images/bg/background-over-responsive.png");
+        background: url("../images/bg/bg-ipad.png");
         object-fit: cover;
+        background-size: cover;
       }
 
-      .bullets {
-        background: url("../images/bg/bullet-responsive.png") !important;
+      &.bullets {
+        background: url("../images/bg/bullet-768.png");
+        background-size: cover;
       }
 
-      .dirt {
-        background: url("../images/bg/dirt-7.png") !important;
+      &.dirt {
+        background: url("../images/bg/dirt-7.png");
       }
     }
 
@@ -2588,7 +2596,7 @@
         .btn-registration {
           width: 100%;
           max-height: 63px;
-          margin-top: 245px;
+          margin-top: 285px;
           max-width: 270px;
           margin-left: 216px;
 
@@ -2725,19 +2733,6 @@
   }
 
 
-  .copyright-box {
-    display: flex;
-    justify-content: flex-end;
-
-    .copyright-title {
-      font-size: 20px;
-      opacity: 0.4;
-      text-transform: uppercase;
-      margin-right: 80px;
-
-    }
-  }
-
   .responsive-section {
     display: flex;
     width: 100%;
@@ -2755,7 +2750,7 @@
         background: url("../images/header/right-logo-720.png") no-repeat;
         position: absolute;
         left: 33%;
-        top: 88%;
+        top: 89%;
 
 
       }
@@ -2763,11 +2758,11 @@
       .copyright-box {
         justify-content: space-around;
         margin-right: 15px;
-        transform: translate(10px, -25px);
+        transform: translate(0px, -25px);
 
         .copyright-title {
           margin: 0;
-          font-size: 8px;
+          font-size: 11px;
         }
       }
     }
@@ -2793,10 +2788,11 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
+      padding: 0 50px;
 
       .left-col__responsive {
         .age-section {
-          margin-left: 69px;
+          margin-left: 0;
           margin-top: 12px;
           width: 20px;
         }
@@ -2805,6 +2801,7 @@
     }
 
     .center-col__responsive {
+      margin: 0 auto;
 
 
       .payments__responsive {
@@ -2906,6 +2903,7 @@
   }
 
 }
+//Ipad
 
 
 @media screen and (max-width: 375px) and (min-width: 320px) and (orientation: portrait) {
@@ -2968,7 +2966,7 @@
           }
         }
 
-        .pluses {
+        &.pluses {
           display: none;
         }
 
@@ -2981,8 +2979,8 @@
           background: url("../images/bg/bullet-320-420.png");
         }
 
-        .dirt {
-          background: url("../images/bg/dirt-7.png") !important;
+        &.dirt {
+          background: url("../images/bg/dirt-7.png");
         }
 
       }
@@ -3698,7 +3696,7 @@
         }
       }
 
-      .pluses {
+      &.pluses {
         display: none;
       }
 
@@ -3711,8 +3709,8 @@
         background: url("../images/bg/bullet-320-420.png");
       }
 
-      .dirt {
-        background: url("../images/bg/dirt-7.png") !important;
+      &.dirt {
+        background: url("../images/bg/dirt-7.png");
       }
 
     }
@@ -3883,14 +3881,14 @@
           .bonus-name {
             margin: 0 auto;
             font-size: 40px;
-            transform: translateX(-19%);
+            transform: translateX(-38%);
 
           }
 
           .bonus-price {
             font-size: 40px;
             margin: 0 auto;
-            transform: translate(21%);
+            transform: translate(1%);
 
           }
         }
@@ -4421,7 +4419,7 @@
         }
       }
 
-      .pluses {
+      &.pluses {
         display: none;
       }
 
@@ -4434,8 +4432,8 @@
         background: url("../images/bg/bullet-320-420.png");
       }
 
-      .dirt {
-        background: url("../images/bg/dirt-7.png") !important;
+      &.dirt {
+        background: url("../images/bg/dirt-7.png");
       }
 
     }
@@ -5132,7 +5130,7 @@
         }
       }
 
-      .pluses {
+      &.pluses {
         display: none;
       }
 
@@ -5145,8 +5143,8 @@
         background: url("../images/bg/bullet-320-420.png");
       }
 
-      .dirt {
-        background: url("../images/bg/dirt-7.png") !important;
+      &.dirt {
+        background: url("../images/bg/dirt-7.png");
       }
 
     }
@@ -5843,7 +5841,7 @@
           }
         }
 
-        .pluses {
+        &.pluses {
           display: none;
         }
 
@@ -5856,8 +5854,8 @@
           background: url("../images/bg/bullet-320-420.png");
         }
 
-        .dirt {
-          background: url("../images/bg/dirt-7.png") !important;
+        &.dirt {
+          background: url("../images/bg/dirt-7.png");
         }
 
       }
@@ -6554,7 +6552,7 @@
           }
         }
 
-        .pluses {
+        &.pluses {
           display: none;
         }
 
@@ -6567,8 +6565,8 @@
           background: url("../images/bg/bullet-320-420.png");
         }
 
-        .dirt {
-          background: url("../images/bg/dirt-7.png") !important;
+        &.dirt {
+          background: url("../images/bg/dirt-7.png");
         }
 
       }
